@@ -8,12 +8,14 @@
 </head>
 <body>
   <h1>Leitor de QR Code</h1>
-  <div id="cameraContainer">
+  <button id="startButton">Ler QR Code</button>
+  <div id="cameraContainer" style="display: none;">
     <video id="camera" autoplay playsinline></video>
   </div>
   <div id="result"></div>
   <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
+  <script src="https://cdn.rawgit.com/serratus/quaggaJS/4128f471/dist/quagga.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
