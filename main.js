@@ -76,8 +76,8 @@ window.addEventListener('beforeunload', () => {
     Quagga.stop();
 });
 
-// Adicionar um event listener para o botão "Iniciar Leitura"
-startButton.addEventListener('click', async () => {
+// Iniciar a câmera automaticamente quando a página é carregada
+window.addEventListener('load', async () => {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ video: true });
     videoElement.srcObject = stream;
@@ -100,4 +100,5 @@ startButton.addEventListener('click', async () => {
     console.error('Erro ao acessar a câmera: ', error);
   }
 });
+
 
